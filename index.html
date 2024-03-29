@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <div class="content">
+          <h1>My balance</h1>
+          <h2>$921.48</h2>
+        </div>
+        <figure class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </figure>
+      </section>
 
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <section class="chart">
+        <h2>Spending</h2>
+        <ul class="graph">
+          <li class="graph__bar bar--1"></li>
+          <li class="graph__bar bar--2"></li>
+          <li class="graph__bar bar--3"></li>
+          <li class="graph__bar bar--4"></li>
+          <li class="graph__bar bar--5"></li>
+          <li class="graph__bar bar--6"></li>
+          <li class="graph__bar bar--7"></li>
+        </ul>
+        <footer class="chart__footer">
+          <div class="summary">
+            <h3>Total this month</h3>
+            <p>$478.33</p>
+          </div>
+          <div class="percentage">
+            <p>+2.4%</p>
+            <p>from last month</p>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
 </html>
