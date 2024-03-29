@@ -146,6 +146,7 @@ main {
   border-radius: 0.25rem;
   transition: all 0.5s;
   cursor: pointer;
+  animation: animateHeight 1s linear;
 }
 
 @media screen and (min-width: 640px) {
@@ -209,5 +210,16 @@ main {
 
   .chart__footer .percentage p {
     font-size: 1.125rem;
+  }
+}
+
+/* Animate graph bar height */
+@keyframes animateHeight {
+  0% {
+    transform: scaleY(0);
+    transform-origin: center bottom;
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
