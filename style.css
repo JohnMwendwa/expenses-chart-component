@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--cream);
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: grid;
+}
+
+main {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.header,
+.chart {
+  max-width: 540px;
+  width: 100%;
+  border-radius: 1.25rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--soft-red);
+}
+
+.header h1 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  color: var(--cream);
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  color: var(--very-pale-orange);
+}
+
+.chart {
+  padding: 2rem;
+  background-color: var(--very-pale-orange);
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .chart {
+    padding: 2rem;
+  }
+}
+
+.chart h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 640px) {
+  .chart h2 {
+    letter-spacing: 0.01rem;
+    font-size: 2rem;
+  }
+}
+
+.graph {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  gap: 1rem;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  list-style: none;
+  border-bottom: 1px solid var(--cream);
+}
+
+.graph__bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.graph__bar .tooltip {
+  position: absolute;
+  top: -2.35rem;
+  opacity: 0;
+  width: min-content;
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  padding: 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  z-index: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .graph__bar .tooltip {
+    top: -3rem;
+    padding: 0.5rem;
+  }
+}
+
+.graph__bar:hover .tooltip {
+  opacity: 1;
+}
+
+.graph__bar .bar {
+  width: 100%;
+  background-color: var(--soft-red);
+  border-radius: 0.25rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+}
+
+.graph__bar .bar:hover {
+  opacity: 0.6;
+}
+
+.graph__bar .label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  color: var(--medium-brown);
+}
+
+.chart__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart__footer .summary h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  color: var(--medium-brown);
+}
+
+.chart__footer .summary p {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  color: var(--dark-brown);
+}
+
+.chart__footer .percentage h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  color: var(--dark-brown);
+  text-align: end;
+}
+
+.chart__footer .percentage p {
+  font-size: 1rem;
+  color: var(--medium-brown);
+}
+
+@media screen and (min-width: 640px) {
+  .chart__footer .summary h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+    color: var(--medium-brown);
+  }
+
+  .chart__footer .summary p {
+    font-size: 3rem;
+  }
+
+  .chart__footer .percentage p {
+    font-size: 1.125rem;
+  }
+}
